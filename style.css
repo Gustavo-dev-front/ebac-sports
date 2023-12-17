@@ -87,12 +87,9 @@ nav ul li:hover {
 }
 
 #produtos ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-}
-
-#produtos ul li {
-  flex: 1;
 }
 
 #produtos button {
@@ -119,4 +116,26 @@ nav ul li:hover {
 
 footer {
 align-self: flex-end;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+  .title {
+    margin: 10px 0;
+  }
+
+  #sobre .container {
+    display: block;
+  }
+
+  #produtos ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  #produtos ul {
+    grid-template-columns: 1fr;
+  }
 }
